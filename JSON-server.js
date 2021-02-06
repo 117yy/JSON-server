@@ -9,8 +9,8 @@ const URL = url.parse(req.url);
 user = url.parse(req.url, true).query.user;
 var json;
 json =
-'path : ' + URL.pathname + '\n' +
-'user : ' + user + '\n';
+'{"path":' + URL.pathname +
+',"user":' + user + '}\n';
 res.end(json);
 });
 server.listen(port).on('error', (err) => {
